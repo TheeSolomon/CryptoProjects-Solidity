@@ -75,3 +75,11 @@ contract BuyMeARootbeer {
         currentOwner = payable(_newOwner);
     }
 }
+
+/**
+Contract Deployment Log:
+
+Goerli Test Network:
+1. Deployed at 0xBC5D2c5d158cb5Dbf3CEf876d00fcaB25669679f (5:54PM PHT 05/23/2022)
+
+ */
