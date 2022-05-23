@@ -26,7 +26,7 @@ contract BuyMeARootbeer is Ownable {
     // List of all memos received from coffee buyers.
     Memo[] memos;
 
-    // Registers the address of the deployer as the contract owner.
+    // Upon contract deployment, registers the address of the deployer as the contract owner.
     constructor() {
         // owner = payable(msg.sender);
         owner = payable(owner());
@@ -43,9 +43,10 @@ contract BuyMeARootbeer is Ownable {
      * @param _message a nice message for the coffee buyer
     */
 
+    // Main function for buying a rootbeer for the owner.
     function buyRootbeer(string memory _name, string memory _message) public payable {
         // Requires buyer to at least have balance to buy coffee.
-        require(msg.value > 0, "Insufficient funds. No ETH.");
+        require(msg.value > 0, "Insufficient funds. Requires more than 0 ETH to purchasee a Rootbeer.");
 
         // Add memo to storage.
         memos.push(Memo(
@@ -68,8 +69,10 @@ contract BuyMeARootbeer is Ownable {
         require(owner.send(address(this).balance));
     }
 
-    
+    // Changes owner of the smart contract. (For challenge for week 2.).
     function transferOwner(address newOwner) public payable onlyOwner {
-
+        require(msg.value > 0, "Current Balance: 0 ETH. Requires more than 0 ETH to change owner");
+        transferOwnership(newOwner);
+        owner = payable(newOwner);
     }
 }
