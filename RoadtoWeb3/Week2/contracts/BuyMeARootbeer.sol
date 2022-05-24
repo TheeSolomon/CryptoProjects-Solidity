@@ -70,9 +70,18 @@ contract BuyMeARootbeer {
         return address(this).balance;
     }
 
-    // Updates the withdrawal address of the smart contract by changing the owner address.
+    // Updates the owner address.
     function changeOwner (address _newOwner) public onlyOwner {
         currentOwner = payable(_newOwner);
+    }
+
+    /**
+     * @dev Sends an amount of tips to another address.
+     * @dev Testing to see if this one would be working. Will be adding another js script for it. (05/24/2022)
+     * @param _tipReceiver encode the address of the receiver
+    */
+    function sendTips (address payable _tipReceiver) public onlyOwner {
+        _tipReceiver.transfer(address(this).balance);
     }
 }
 
