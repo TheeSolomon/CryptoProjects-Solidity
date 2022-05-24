@@ -70,7 +70,7 @@ contract BuyMeARootbeer {
         return address(this).balance;
     }
 
-    // Updates the withdrawal address of the smart contract by changing the owner address.
+    // Changes the contract owner address.
     function changeOwner (address _newOwner) public onlyOwner {
         currentOwner = payable(_newOwner);
     }

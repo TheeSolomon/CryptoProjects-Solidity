@@ -16,6 +16,13 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY;
 module.exports = {
   solidity: "0.8.4",
   networks: {
+    /**
+     * @dev You will need to create your own environment variables by creating a .env file and stating the following variables:
+     * GOERLI_URL=<https://eth-goerli.alchemyapi.io/v2/(your goerli api key)>
+     * GOERLI_API_KEY=<API KEY>
+     * PRIVATE_KEY=<wallet private key>
+     * Note: I am using alchemy for managing my DAPPs.
+     */
     goerli: {
       url: GOERLI_URL,
       accounts: [PRIVATE_KEY]
