@@ -13,6 +13,5 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
-
 # Solomon's Notes
-The following project is for a smart contract that allows users to donate tips using ETH to the contract deployer in the his/her own website. 
+The following project is for dynamic on-chain NFT that is the baseline for NFT video games.
