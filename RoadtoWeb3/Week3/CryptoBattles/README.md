@@ -13,5 +13,6 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
-# Solomon's Notes
-The following project is for dynamic on-chain NFT that is the baseline for NFT video games.
+
+# Solomon's Notes:
+This project is for a dynamic on-chain NFT metadata. Warning. This project is currently having an issue on running to the mumbai testnet, requires to debug the wallet account. Will be skipping this project for now and head on to week 4.
