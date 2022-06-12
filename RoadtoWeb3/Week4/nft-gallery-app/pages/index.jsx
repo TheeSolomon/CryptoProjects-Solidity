@@ -1,5 +1,4 @@
 import { NFTCard } from "../components/nftCard"
-import { redirect } from 'next/dist/server/api-utils';
 import { useState } from 'react' 
 
 const Home = () => {
@@ -34,7 +33,7 @@ const Home = () => {
     }
   } 
 
-  async function fetchNFTsForCollection() {
+  const fetchNFTsForCollection = async() => {
       if(collection.length) {
         var requestOptions = {
           method: 'GET'
